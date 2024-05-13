@@ -116,6 +116,8 @@ addTodoButton.addEventListener('click', () => {
   deleteButton.style.display = 'none';
   deleteButton.setAttribute('data-delete-id', currentID);
 
+  checkboxElement.disabled = true;
+  checkboxElement.style.opacity = '.1';
   todoContent.appendChild(checkboxElement);
   todoContent.appendChild(inputElement);
   selectOption.appendChild(defaultOption);
@@ -132,6 +134,7 @@ addTodoButton.addEventListener('click', () => {
   todoContainer.style.display = 'flex';
   taskTodoArrow.style.transform = 'rotate(0deg)';
   inputElement.focus();
+
 
   const selectingCategory = todoContent.querySelector('.selecting-category');
   selectingCategory.addEventListener('change', () => {
@@ -180,6 +183,8 @@ addTodoButton.addEventListener('click', () => {
     deleteButton.style.display = 'flex';
     todoContent.setAttribute('id', selectOption.value)
     todoContent.classList.add(`${selectOption.value}`);
+    checkboxElement.disabled = false;
+    checkboxElement.style.opacity = '1';
     selectOptionContainer.remove();
     todo.push(todoObject);
     console.log(todo);
