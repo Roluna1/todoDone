@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>To-Do</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      <div class="top-section">
+        <img class="clover" src="img/clover.png">
+        <h1>TO-DO</h1>
+      </div>
+      <div class="horizontal-line-container">
+        <hr class="horizontal-line">
+      </div>
+      <div class="all-task-section">
+        <h2><span>ALL </span>TASKS</h2><span class="arrow-todo">&#9660</span>
+      </div>
+      <div class="category-container">
+        <div class="category-section">
+          <p class="category-text all"><span class="all">&#9679</span> All</p>
+          <p class="category-text school"><span class="school">&#9679</span> School</p>
+          <p class="category-text work"><span class="work">&#9679</span> Work</p>
+          <p class="category-text personal"><span class="personal">&#9679</span> Personal</p>
+          <p class="category-text shopping"><span class="shopping">&#9679</span> Shopping</p>
+        </div>
+      </div>
+
+      <div class="todo-container">
+        <!--
+      <div class="todo-content">
+          <input class="input-todo-checkbox" type="checkbox">
+          <input class="input-todo-text" type="text">
+          <select value="Select Category" class="selecting-category">
+            <option value="select" selected="true" disabled="true">Select</option>
+            <option class="school" value="school">School</option>
+            <option class="work" value="work">Work</option>
+            <option class="personal" value="personal">Personal</option>
+            <option class="shopping" value="shopping">Shopping</option>
+          </select> 
+          <button class="check-button">&#10004</button>
+        </div>
+        &#9660 = up arrow
+
+        &#9650 = down arrow
+        -->
+      </div>
+      <div class="complete-section-container">
+        <div class="complete-section">
+          <h2>COMPLETED</h2><span class="task-completed-arrow">&#9660</span>
+        </div>
+        <div class="complete-todo-container">
+        </div>
+      </div>
+    </div>
+    <div class="add-todo-button-container">
+      <button class="add-todo-button">+</button>
+    </div>
+  </div>
+  <script type="module" src="script/app.js"></script>
+</body>
+</html>
