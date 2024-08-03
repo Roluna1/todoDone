@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+  --main-color: #FFCDD6;
+  --primary-color-font: #80261E;
+  --secondary-color-font: #DD678A;
+  --line-color: #D9849B;
+  --school-color: #FF6763;
+  --work--color: #FFB248;
+  --personal-color: #e6e635;
+  --shopping-color: #99E79B;
+  --button-color: #0000FE;
+}
+*{
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+html {
+  height: 100%;
+  background-color: #FFCDD6;
+}
+.top-section{
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.clover{
+  height: 25px;
+  transform: rotate(50deg);
+}
+.horizontal-line-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.horizontal-line{
+  width: 95%;
+  background-color: var(--line-color);
+  border: none;
+  height: 2px;
+}
+h1{
+  color: var(--primary-color-font);
+  font-size: 1.5rem;
+  margin-left: 5px;
+  cursor: default;
+}
+h2{
+  font-size: 1.5rem;
+  color: var(--primary-color-font);
+  cursor: default;
+}
+h2 span {
+  color: var(--secondary-color-font);
+}
+body{
+  display: flex;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  background-color: #FFCDD6;
+  width: calc(100% - 20px);
+  height: 100%;
+  padding: 10px;
+}
+.content{
+  margin: 5px;
+  min-height: 600px;
+}
+.all-task-section{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.arrow-todo{
+  margin-left: 5px;
+  margin-top: -.5rem;
+  color: var(--secondary-color-font);
+  cursor: pointer;
+}
+.task-completed-arrow{
+  color: var(--secondary-color-font);
+  margin-left: 5px;
+  margin-bottom: 6px;
+  cursor: pointer;
+}
+.category-container {
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.category-section {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: .4rem;
+}
+.school {
+  color: var(--school-color);
+  text-align: center;
+}
+.work {
+  color: var(--work--color);
+  text-align: center;
+}
+.personal {
+  color: var(--personal-color);
+  text-align: center;
+}
+.shopping {
+  color: var(--shopping-color);
+  text-align: center;
+}
+.category-text {
+  color: var(--primary-color-font);
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-block;
+}
+.category-container::-webkit-scrollbar {
+  width: 8px;
+  height: 5px;
+}
+
+.category-container::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+.category-container::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color-font);
+  border-radius: 100px; 
+
+}
+.category-container::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+.category-container::-webkit-scrollbar-thumb {
+  transition: background-color 0.3s;
+}
+
+.select-option-category{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  width: 90px;
+}
+.todo-container, .complete-todo-container{
+  display: flex;
+  flex-direction: column;
+  margin-top: .6rem;
+  gap: 10px;
+}
+.todo-content, .compelete-todo-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: white;
+  height: 50px;
+  border-radius: 10px;
+  transition: .7s;
+}
+.input-todo-checkbox{
+  width: 25px;
+  margin-left: 10px;
+  margin-right: 8px;
+  color: var(--primary-color-font);
+}
+.todo-content input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--primary-color-font);
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+}
+.todo-content input[type="checkbox"]:checked {
+  background-color: var(--primary-color-font);
+  border-color: var(--primary-color-font);
+}
+.input-todo-text{
+  width: 100%;
+  height: calc(100% - 2px);
+  color: var(--primary-color-font);
+  font-size: 15px;
+  border: none;
+  outline: none;
+  flex: 1;
+  transition: .7s;
+  cursor: default;
+}
+.input-todo-text:not(:read-only){
+  color: #0461cc;
+}
+.selecting-category{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+.selecting-category:hover{
+  opacity: .5;
+}
+.check-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 100%;
+  border: none;
+  background-color: var(--primary-color-font);
+  color: var(--main-color);
+  border-radius: 0px 10px 10px 0px;
+}
+.complete-section{
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+.add-todo-button-container{
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  right: 10px;
+  bottom: 10px;
+  border-radius: 50%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.add-todo-button{
+  border: none;
+  font-size: 25px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--button-color);
+  color: white;
+  cursor: pointer;
+}
+select {
+  text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: rgb(92, 91, 91);
+}
+.edit-button, .delete-button{
+  height: 25px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.edit-icon, .delete-icon, .save-icon{
+  height: 100%;
+}
+::-webkit-scrollbar {
+  width: 100%;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color-font);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--line-color);
+}
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+button:active {
+  opacity: 1;
+}
+
